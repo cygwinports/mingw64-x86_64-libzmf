@@ -1,0 +1,16 @@
+CROSS_HOST="x86_64-w64-mingw32"
+inherit cross
+
+NAME="mingw64-x86_64-libzmf"
+VERSION=0.0.2
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="Zoner Draw import filter library for Win64 toolchain"
+DESCRIPTION="Libzmf is a library that parses the file format of Zoner
+Callisto/Draw documents."
+HOMEPAGE="https://wiki.documentfoundation.org/DLP/Libraries/libzmf"
+SRC_URI="http://dev-www.libreoffice.org/src/libzmf/libzmf-${VERSION}.tar.xz"
+SRC_DIR="libzmf-${VERSION}"
+
+CYGCONF_ARGS="--disable-werror --without-docs"
+MAKEOPTS+=" bin_PROGRAMS= "
